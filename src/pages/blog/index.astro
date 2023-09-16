@@ -1,0 +1,57 @@
+---
+import Layout from "../../layouts/BlogPost.astro";
+import PostCard from "../../components/PostCard";
+
+interface PostCardContent {
+  title: string;
+  description: string;
+  date: string;
+  tags: string[];
+}
+
+interface PostCardService extends Array<PostCardContent> {}
+
+const HardCodedPosts: PostCardService = [
+  {
+    title: "Creating my first astro framework project",
+    description:
+      "This website was first made by using Astro Framework. I have been using other frameworks such as nextjs, nuxtjs, flutter, and yet this is the best framework for me. At first, I thought this framework was only for content based framework. But thanks to the supports, this framework can be used to make more complex websites.",
+    date: "18 Sept 2023",
+    tags: ["#astro", "#tailwind", "#react", "#svelte"],
+  },
+  {
+    title: "Less than half a month left",
+    description:
+      "There is Less than half a month left for me to finish my quelify project with the client. Pray for me :)",
+    date: "16 Sept 2023",
+    tags: ["#quelify", "#flutter", "#nextjs"],
+  },
+  {
+    title: "Check the halal status",
+    description:
+      "Recently, there have been a viral about haram claypot. This is very intriguing for many muslims since we cannot fully determine the halal status. By using this bot, you can check the halal status of your intended premises. Do not worry since this bot is supported and powered by JAKIM database. However, there might be a slow in using due to poor performance of JAKIM's server.",
+    date: "13 Sept 2023",
+    tags: ["#halal", "#expressjs", "#telegrambot", "#halalcheckerbot"],
+  },
+];
+---
+
+<Layout
+  title="All Posts"
+  description=""
+  pubDate={new Date("August 08 2021")}
+  heroImage="/blog-placeholder-about.jpg"
+>
+  {
+    HardCodedPosts.map((e) => {
+      return (
+        <PostCard
+          title={e.title}
+          description={e.description}
+          date={e.date}
+          tags={e.tags}
+        />
+      );
+    })
+  }
+</Layout>

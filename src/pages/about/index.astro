@@ -1,0 +1,249 @@
+---
+import Layout from "../../layouts/BlogPost.astro";
+import { LPrimaryColor } from "../../styles/theme";
+// import { Content } from "../../content/about/experiences.mdx";
+
+const heroImage = "/blog-placeholder-about.jpg";
+
+// Work experience section
+interface WorkExperienceType {
+  title: string;
+  duration: string;
+  description: string[];
+}
+interface WorkExperiencesTypesArr extends Array<WorkExperienceType> {}
+const WorkExperiences: WorkExperiencesTypesArr = [
+  {
+    title: "Quelify",
+    duration: "March 2023 - present",
+    description: [
+      "Project manager, system analyzer, and technical officer",
+      "Develop an application for business management",
+      "Full stack engineer",
+    ],
+  },
+];
+
+// Involvements section
+interface Involvement {
+  title: string;
+  description: string[];
+}
+interface InvolvementArr extends Array<Involvement> {}
+const Involvements: InvolvementArr = [
+  {
+    title: "Krypton Technologies",
+    description: [
+      "Intech-21 Competition organized by UM",
+      "Top 10 finalist",
+      "Year 2022",
+    ],
+  },
+  {
+    title: "Artista",
+    description: [
+      "Piala Usahawan Digital 2022 Competition organized by UTHM & KPT",
+      "Top 20 finalist",
+      "Year 2022",
+    ],
+  },
+];
+
+// Side projects section
+interface SideProject {
+  title: string;
+  description: string;
+}
+interface SideProjectArr extends Array<SideProject> {}
+const SideProjects: SideProjectArr = [
+  {
+    title: "Cargame",
+    description: "A simple terminal car game built in C++.",
+  },
+  {
+    title: "Ncrypt",
+    description:
+      "Playing with own Cryptography algorithms to create message encryption.",
+  },
+];
+
+interface Education {
+  schoolName: string;
+  duration: string;
+  description: string[];
+}
+interface EducationArr extends Array<Education> {}
+const Educations: EducationArr = [
+  {
+    schoolName: "International Islamic University Malaysia (IIUM)",
+    duration: "10 Oct 2021",
+    description: [
+      "Bachelor in Computer Science",
+      "Majoring in Software Engineering",
+      "Speaker for web development workshop",
+      "Members of Business Incubator club",
+      "Committee in Valorant Competition",
+      "Current CGPA: 3.56",
+    ],
+  },
+  {
+    schoolName: "Centre for Foundation Studies (IIUM)",
+    duration: "6 July 2020",
+    description: [
+      "Members of Enginius Society (Engineering)",
+      "Current CGPA: 3.91",
+    ],
+  },
+  {
+    schoolName: "SMK Puchong Permai",
+    duration: "Ended in 2019",
+    description: ["Spm ok"],
+  },
+];
+---
+
+<Layout
+  title="About Me"
+  description=""
+  pubDate={new Date("August 08 2021")}
+  heroImage="/blog-placeholder-about.jpg"
+>
+  <div class="flex flex-col w-auto items-center">
+    <div class="w-auto flex flex-col items-center my-10">
+      <img src="/pictures/fikri.png" class="h-[300px] w-[300px]" />
+      <div class="w-auto flex-col flex items-center pt-4">
+        <h5 class="text-2xl font-semibold text-slate-900">
+          Fikri Bin Hisham-muddin
+        </h5>
+        <h6 class="text-lg font-semibold text-slate-700">
+          Computer Science Student
+        </h6>
+        <h6 class="text-lg font-semibold text-slate-700">
+          International Islamic University Malaysia (IIUM)
+        </h6>
+      </div>
+      <div class="w-fit flex flex-row items-center mt-5">
+        <a href="https://twitter.com/fiekzzlala22" target="_blank" class="mx-2">
+          <span class="sr-only">Follow Astro on Twitter</span>
+          <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
+            ><path
+              fill={LPrimaryColor}
+              d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+            ></path></svg
+          >
+        </a>
+        <a href="https://github.com/fiekzz" target="_blank" class="mx-2">
+          <span class="sr-only">Go to Astro's GitHub repo</span>
+          <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
+            ><path
+              fill={LPrimaryColor}
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+            ></path></svg
+          >
+        </a>
+        <a href="https://linkedin.com/in/fiekzz/" target="_blank" class="mx-2">
+          <span class="sr-only">Go to fiekzz's LinkedIn</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50 50"
+            width="36px"
+            height="36px"
+          >
+            <path
+              fill={LPrimaryColor}
+              d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"
+            ></path></svg
+          >
+        </a>
+      </div>
+    </div>
+    <p class="text-xl">
+      Fikri aso known as fiq is a Computer Science Student majoring in Software
+      Engineering currently in 3rd year from IIUM. His major passion is helping
+      the others and solving the problems while using technologies. Check out
+      more on his projects!
+    </p>
+    <div class="w-full flex flex-col justify-start">
+      <div>
+        <h4 class="text-2xl font-semibold text-start pt-8">Work Experiences</h4>
+        {
+          WorkExperiences.map((e) => {
+            return (
+              <div class="flex flex-col justify-start pt-3">
+                <h4 class="text-lg font-medium">
+                  {e.title} | {e.duration}
+                </h4>
+                <ul>
+                  {e.description.map((item) => {
+                    return (
+                      <li class="text-lg font-regular list-disc mx-5 pl-3">
+                        {item}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })
+        }
+      </div>
+      <div>
+        <h4 class="text-2xl font-semibold text-start pt-8">Involvements</h4>
+        {
+          Involvements.map((e) => {
+            return (
+              <div class="flex flex-col justify-start pt-3">
+                <h4 class="text-lg font-medium">{e.title}</h4>
+                <ul>
+                  {e.description.map((item) => {
+                    return (
+                      <li class="text-lg font-regular list-disc mx-5 pl-3">
+                        {item}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })
+        }
+      </div>
+      <div>
+        <h4 class="text-2xl font-semibold text-start pt-8">Side projects</h4>
+        {
+          SideProjects.map((e) => {
+            return (
+              <div class="flex flex-col pt-3">
+                <h4 class="text-lg font-medium">{e.title}</h4>
+                <h5 class="text-lg font-regular">{e.description}</h5>
+              </div>
+            );
+          })
+        }
+      </div>
+      <div>
+        <h4 class="text-2xl font-semibold text-start pt-8">Side projects</h4>
+        {
+          Educations.map((e) => {
+            return (
+              <div class="flex flex-col justify-start pt-3">
+                <h4 class="text-lg font-medium">
+                  {e.schoolName} | {e.duration}
+                </h4>
+                <ul>
+                  {e.description.map((item) => {
+                    return (
+                      <li class="text-lg font-regular list-disc mx-5 pl-3">
+                        {item}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+</Layout>
