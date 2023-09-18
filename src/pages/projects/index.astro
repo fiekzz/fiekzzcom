@@ -44,5 +44,41 @@ const OthersArr = resProjects?.filter((e) => e.projectType == 4);
         )
       }
     </div>
+    <h4 class="text-2xl font-semibold text-start pb-3 py-4">Applications</h4>
+    <div class="grid grid-cols-2 gap-4 max-md:grid-cols-1">
+      {
+        ApplicationsArr != null ? (
+          ApplicationsArr.map((item) => {
+            return <ProjectCard item={item} />;
+          })
+        ) : (
+          <div>Something went wrong :&#40;</div>
+        )
+      }
+    </div>
+    <h4 class="text-2xl font-semibold text-start pb-3 py-4">University</h4>
+    <div class="grid grid-cols-2 gap-4 max-md:grid-cols-1">
+      {
+        UniversityArr != null ? (
+          UniversityArr.map((item) => {
+            return <ProjectCard item={item} />;
+          })
+        ) : (
+          <div>Something went wrong :&#40;</div>
+        )
+      }
+    </div>
+    <h4 class="text-2xl font-semibold text-start pb-3 py-4">Others</h4>
+    <div class="grid grid-cols-2 gap-4 max-md:grid-cols-1">
+      {
+        OthersArr != null ? (
+          OthersArr.map((item) => {
+            return <ProjectCard item={item} />;
+          })
+        ) : (
+          <div>Something went wrong :&#40;</div>
+        )
+      }
+    </div>
   </div>
 </Layout>
