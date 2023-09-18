@@ -11,7 +11,7 @@ const currentPath = pathname.slice(1);
 
 <header>
   <nav>
-    <a href="/" class="logo-link"
+    <a href="/" class="logo-link" aria-label="home page"
       ><Fiekzzlogo Color={LPrimaryColor} Height="50" Width="50" />
     </a>
     <div class="max-md:hidden">
@@ -56,8 +56,9 @@ const currentPath = pathname.slice(1);
     <button
       id="dropdownDefaultButton"
       data-dropdown-toggle="dropdown"
-      class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:hidden"
+      class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2 text-center inline-flex items-center dark:bg-LPrimary dark:hover:bg-LPrimary dark:focus:ring-blue-800 md:hidden"
       type="button"
+      aria-label="menu"
       ><Icon
         pack="icon-park"
         name="hamburger"
