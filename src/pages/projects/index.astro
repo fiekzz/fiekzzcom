@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/BlogPost.astro";
 import supabase from "../../supabase";
+import ProjectCard from "../../components/ProjectCard.astro";
 
 interface ProjectsType {
   id: string;
@@ -30,145 +31,13 @@ const OthersArr = resProjects?.filter((e) => e.projectType == 4);
   pubDate={new Date("August 08 2021")}
   heroImage="/blog-placeholder-about.jpg"
 >
-  <div class="container my-12 mx-auto">
+  <div class="my-12 mx-auto max-md:mx-0 max-md:w-full">
     <h4 class="text-2xl font-semibold text-start pb-3">Highlights</h4>
-    <div class="-m-4 flex flex-wrap">
+    <div class="grid grid-cols-2 gap-4 max-md:grid-cols-1">
       {
         HighlightsArr != null ? (
           HighlightsArr.map((item) => {
-            return (
-              <div class="md p-4 md:w-1/2 max-w-xl">
-                <article class="overflow-hidden rounded-lg shadow-lg">
-                  <a href="#">
-                    <img
-                      alt={item.title}
-                      class="block h-auto w-full"
-                      src="/pictures/fikri1.jpg"
-                    />
-                  </a>
-
-                  <header class="flex flex-col justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-2xl font-medium">
-                      <a
-                        class="no-underline hover:text-LPrimary text-black"
-                        href="#"
-                      >
-                        {item.title}
-                      </a>
-                    </h1>
-                    <h3 class="text-base font-normal">{item.description}</h3>
-                  </header>
-                </article>
-              </div>
-            );
-          })
-        ) : (
-          <div>Something went wrong :&#40;</div>
-        )
-      }
-    </div>
-    <h4 class="text-2xl font-semibold text-start pb-3 mt-6">Applications</h4>
-    <div class="-m-4 flex flex-wrap">
-      {
-        ApplicationsArr != null ? (
-          ApplicationsArr.map((item) => {
-            return (
-              <div class="md p-4 md:w-1/2 max-w-xl">
-                <article class="overflow-hidden rounded-lg shadow-lg">
-                  <a href="#">
-                    <img
-                      alt={item.title}
-                      class="block h-auto w-full"
-                      src="/pictures/fikri1.jpg"
-                    />
-                  </a>
-
-                  <header class="flex flex-col justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-2xl font-medium">
-                      <a
-                        class="no-underline hover:text-LPrimary text-black"
-                        href="#"
-                      >
-                        {item.title}
-                      </a>
-                    </h1>
-                    <h3 class="text-base font-normal">{item.description}</h3>
-                  </header>
-                </article>
-              </div>
-            );
-          })
-        ) : (
-          <div>Something went wrong :&#40;</div>
-        )
-      }
-    </div>
-    <h4 class="text-2xl font-semibold text-start pb-3 mt-6">University</h4>
-    <div class="-m-4 flex flex-wrap">
-      {
-        UniversityArr != null ? (
-          UniversityArr.map((item) => {
-            return (
-              <div class="md p-4 md:w-1/2 max-w-xl">
-                <article class="overflow-hidden rounded-lg shadow-lg">
-                  <a href="#">
-                    <img
-                      alt={item.title}
-                      class="block h-auto w-full"
-                      src="/pictures/fikri1.jpg"
-                    />
-                  </a>
-
-                  <header class="flex flex-col justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-2xl font-medium">
-                      <a
-                        class="no-underline hover:text-LPrimary text-black"
-                        href="#"
-                      >
-                        {item.title}
-                      </a>
-                    </h1>
-                    <h3 class="text-base font-normal">{item.description}</h3>
-                  </header>
-                </article>
-              </div>
-            );
-          })
-        ) : (
-          <div>Something went wrong :&#40;</div>
-        )
-      }
-    </div>
-    <h4 class="text-2xl font-semibold text-start pb-3 mt-6">Others</h4>
-    <div class="-m-4 flex flex-wrap">
-      {
-        OthersArr != null ? (
-          OthersArr.map((item) => {
-            return (
-              <div class="md p-4 md:w-1/2 max-w-xl">
-                <article class="overflow-hidden rounded-lg shadow-lg">
-                  <a href="#">
-                    <img
-                      alt={item.title}
-                      class="block h-auto w-full"
-                      src="/pictures/fikri1.jpg"
-                    />
-                  </a>
-
-                  <header class="flex flex-col justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-2xl font-medium">
-                      <a
-                        class="no-underline hover:text-LPrimary text-black"
-                        href="#"
-                      >
-                        {item.title}
-                      </a>
-                    </h1>
-                    <h3 class="text-base font-normal">{item.description}</h3>
-                  </header>
-                </article>
-              </div>
-            );
+            return <ProjectCard item={item} />;
           })
         ) : (
           <div>Something went wrong :&#40;</div>

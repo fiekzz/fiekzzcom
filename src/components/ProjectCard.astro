@@ -1,0 +1,36 @@
+---
+interface ProjectType {
+  id: string;
+  title: string;
+  description: string;
+  linkUrl: string;
+  projectType: number;
+}
+
+interface Props {
+  item: ProjectType;
+}
+
+const { item } = Astro.props;
+---
+
+<div class="w-full">
+  <article class="overflow-hidden rounded-lg shadow-lg">
+    <a href="#">
+      <img
+        alt={item.title}
+        class="block h-auto w-full"
+        src="/pictures/fikri1.jpg"
+      />
+    </a>
+
+    <header class="flex flex-col justify-between leading-tight p-2 md:p-4">
+      <h1 class="text-2xl font-medium">
+        <a class="no-underline hover:text-LPrimary text-black" href="#">
+          {item.title}
+        </a>
+      </h1>
+      <h3 class="text-base font-normal">{item.description}</h3>
+    </header>
+  </article>
+</div>

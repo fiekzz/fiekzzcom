@@ -1,19 +1,20 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 
-type Props = HTMLAttributes<"a">;
+interface Props extends HTMLAttributes<"a"> {
+  isActive: boolean;
+}
 
-const { href, class: className, ...props } = Astro.props;
+const { href, class: className, isActive, ...props } = Astro.props;
 
-const { pathname } = Astro.url;
-const isActive = href === pathname || href === pathname.replace(/\/$/, "");
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <a
   href={href}
-  class:list={[className, { active: isActive }]}
   {...props}
-  class="navlink"
+  class:list={["navlink", isActive ? "active-class" : null]}
 >
   <slot />
 </a>
@@ -25,10 +26,10 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "");
     font-size: 1.2rem;
     font-weight: 500;
   }
-  .navlink:active {
-    color: #006590;
-  }
   .navlink:hover {
     color: #006590;
+  }
+  .active-class {
+    color: #006590 !important;
   }
 </style>
