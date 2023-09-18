@@ -56,13 +56,13 @@ const currentPath = pathname.slice(1);
     <button
       id="dropdownDefaultButton"
       data-dropdown-toggle="dropdown"
-      class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2 text-center inline-flex items-center dark:bg-LPrimary dark:hover:bg-LPrimary dark:focus:ring-blue-800 md:hidden"
+      class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2 max-md:p-0 text-center inline-flex items-center dark:bg-LPrimary dark:hover:bg-LPrimary dark:focus:ring-blue-800 md:hidden"
       type="button"
       aria-label="menu"
       ><Icon
-        pack="icon-park"
-        name="hamburger"
-        class="h-10 w-10 flex text-center"
+        pack="mdi"
+        name="menu"
+        class="h-12 w-12 flex text-center text-LPrimary"
       /></button
     >
     <!-- Dropdown menu -->
@@ -88,6 +88,16 @@ const currentPath = pathname.slice(1);
             >Projects</a
           >
         </li>
+        <li>
+          <a
+            href="/about"
+            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+            >About Me</a
+          >
+        </li>
+        <hr
+          class="w-full h-[1px] bg-LPrimaryContainer border-0 rounded dark:bg-LPrimaryContainer"
+        />
         <li>
           <a
             href="https://github.com/fiekzz"
