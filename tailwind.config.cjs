@@ -26,6 +26,9 @@ module.exports = {
         ErrorContainer: "#93000a",
         OnErrorContainer: "#ffdad6",
       },
+      transitionProperty: {
+        height: "height",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],

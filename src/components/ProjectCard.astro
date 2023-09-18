@@ -15,7 +15,9 @@ const { item } = Astro.props;
 ---
 
 <div class="w-full">
-  <article class="overflow-hidden rounded-lg shadow-lg">
+  <article
+    class="overflow-hidden rounded-lg shadow-lg hover:shadow-LPrimary transition-all duration-300"
+  >
     <a href="#">
       <img
         alt={item.title}

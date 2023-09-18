@@ -26,12 +26,8 @@ const currentPath = pathname.slice(1);
       </HeaderLink>
     </div>
     <div class="max-md:hidden flex justify-center items-center">
-      <a
-        href="https://twitter.com/fiekzzlala22"
-        target="_blank"
-        class="ref-link"
-      >
-        <span class="sr-only">Follow Astro on Twitter</span>
+      <a href="https://x.com/fiekzzlala22" target="_blank" class="ref-link">
+        <span class="sr-only">Follow Fikri on X</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -44,7 +40,7 @@ const currentPath = pathname.slice(1);
         >
       </a>
       <a href="https://github.com/fiekzz" target="_blank">
-        <span class="sr-only">Go to Astro's GitHub repo</span>
+        <span class="sr-only">Go to Fikri's GitHub repo</span>
         <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
           ><path
             fill={LPrimaryColor}
@@ -56,7 +52,7 @@ const currentPath = pathname.slice(1);
     <button
       id="dropdownDefaultButton"
       data-dropdown-toggle="dropdown"
-      class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2 max-md:p-0 text-center inline-flex items-center dark:bg-LPrimary dark:hover:bg-LPrimary dark:focus:ring-blue-800 md:hidden"
+      class="text-white focus:outline-none font-medium rounded-lg text-sm p-2 max-md:p-0 text-center inline-flex items-center dark:bg-LPrimary dark:hover:bg-LPrimary dark:focus:ring-blue-800 md:hidden"
       type="button"
       aria-label="menu"
       ><Icon
@@ -68,7 +64,7 @@ const currentPath = pathname.slice(1);
     <!-- Dropdown menu -->
     <div
       id="dropdown"
-      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+      class="fixed top-[60px] left-full z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 transform translate-x-0 ease-in-out duration-300"
     >
       <ul
         class="py-2 text-sm text-gray-700 dark:text-gray-200"
@@ -98,6 +94,14 @@ const currentPath = pathname.slice(1);
         <hr
           class="w-full h-[1px] bg-LPrimaryContainer border-0 rounded dark:bg-LPrimaryContainer"
         />
+        <li>
+          <a
+            href="https://linkedin.com/in/fiekzz"
+            target="_blank"
+            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+            >LinkedIn</a
+          >
+        </li>
         <li>
           <a
             href="https://github.com/fiekzz"
