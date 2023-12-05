@@ -40,6 +40,8 @@ const HardCodedPosts: PostCardService = [
     tags: ["#GDGKL", "#Devfest", "#Monash", "#flutter", "#GCP", "#AIML"]
   }
 ];
+
+const ReversedHardCodedPosts = HardCodedPosts.reverse()
 ---
 
 <Layout
@@ -49,7 +51,7 @@ const HardCodedPosts: PostCardService = [
   heroImage="/blog-placeholder-about.jpg"
 >
   {
-    HardCodedPosts.toReversed().map((e, index) => {
+    ReversedHardCodedPosts.map((e, index) => {
       return (
         <PostCard
           title={e.title}
