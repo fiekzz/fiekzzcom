@@ -34,6 +34,8 @@ const WorkExperiences: WorkExperiencesTypesArr = [
   }
 ];
 
+const ReversedWorkExperience = WorkExperiences.reverse()
+
 // Involvements section
 interface Involvement {
   title: string;
@@ -70,6 +72,8 @@ const Involvements: InvolvementArr = [
   },
 ];
 
+const ReversedInvolvements = Involvements.reverse()
+
 // Side projects section
 interface SideProject {
   title: string;
@@ -87,6 +91,8 @@ const SideProjects: SideProjectArr = [
       "Playing with own Cryptography algorithms to create message encryption.",
   },
 ];
+
+const ReversedSideProjects = SideProjects.reverse()
 
 interface Education {
   schoolName: string;
@@ -121,6 +127,8 @@ const Educations: EducationArr = [
     description: ["Spm ok"],
   },
 ];
+
+const ReversedEducation = Educations.reverse()
 ---
 
 <Layout
@@ -192,7 +200,7 @@ const Educations: EducationArr = [
       <div>
         <h4 class="text-2xl font-semibold text-start pt-8">Work Experiences</h4>
         {
-          WorkExperiences.toReversed().map((e) => {
+          ReversedWorkExperience.map((e) => {
             return (
               <div class="flex flex-col justify-start pt-3">
                 <h4 class="text-lg font-medium">
@@ -215,7 +223,7 @@ const Educations: EducationArr = [
       <div>
         <h4 class="text-2xl font-semibold text-start pt-8">Involvements</h4>
         {
-          Involvements.toReversed().map((e) => {
+          ReversedInvolvements.map((e) => {
             return (
               <div class="flex flex-col justify-start pt-3">
                 <h4 class="text-lg font-medium">{e.title}</h4>
@@ -236,7 +244,7 @@ const Educations: EducationArr = [
       <div>
         <h4 class="text-2xl font-semibold text-start pt-8">Side projects</h4>
         {
-          SideProjects.map((e) => {
+          ReversedSideProjects.map((e) => {
             return (
               <div class="flex flex-col pt-3">
                 <h4 class="text-lg font-medium">{e.title}</h4>
@@ -249,7 +257,7 @@ const Educations: EducationArr = [
       <div>
         <h4 class="text-2xl font-semibold text-start pt-8">Activities</h4>
         {
-          Educations.map((e) => {
+          ReversedEducation.map((e) => {
             return (
               <div class="flex flex-col justify-start pt-3">
                 <h4 class="text-lg font-medium">
